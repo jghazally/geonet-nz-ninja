@@ -1,0 +1,24 @@
+{
+  "name": "GeonetMonitor",
+  "version": "1.0.0",
+  "description": "Make Nina's Eyes change color dependingn on Geonet Earthquake Magnitudes in NZ",
+  "main": "app.js",
+  "dependencies": {
+    "request": "~2.34.0",
+    "ninja-blocks": "~0.1.3",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "Ninja",
+    "Blocks",
+    "Geonet",
+    "NZ"
+  ],
+  "author": "Jeffry Ghazally",
+  "license": "BSD"
+}
