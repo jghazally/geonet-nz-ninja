@@ -8,14 +8,14 @@ var recentQuake = 0;
 var magnitude = 0;
 
 var colors = {
-	0: '8f00ff',
-	1: '4b0082',
-	2: '0000ff',
-	3: '00ff00',
-	4: 'ffff00',
-	5: 'ff7f00',
-	6: 'ff0000',
-	7: 'ffffff'
+	0: '8f00ff', // Violet
+	1: '4b0082', // Indigo
+	2: '0000ff', // Blue
+	3: '00ff00', // Green
+	4: 'ffff00', // Yellow
+	5: 'ff7f00', // Orange
+	6: 'ff0000', // Red
+	7: 'ffffff' // White
 };
 
 function checkGeonet() {
