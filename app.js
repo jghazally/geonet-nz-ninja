@@ -1,13 +1,16 @@
-var secrets = require('./secrets.js');
-var _ = require('underscore');
-var request = require('request');
-var ninjaBlocks = require('ninja-blocks');
+// Include all the require files
+var secrets = require('./secrets.js'),
+	_ = require('underscore'),
+	request = require('request'),
+	ninjaBlocks = require('ninja-blocks');
 
+// Setup the ninja
 var ninja = ninjaBlocks.app({user_access_token:secrets.USER_ACCESS_TOKEN});
-var recentQuake = 0;
-var magnitude = 0;
 
-var colors = {
+// Setup the defaults
+var recentQuake = 0,
+	magnitude = 0,
+	colors = {
 	0: '8f00ff', // Violet
 	1: '4b0082', // Indigo
 	2: '0000ff', // Blue
@@ -16,7 +19,7 @@ var colors = {
 	5: 'ff7f00', // Orange
 	6: 'ff0000', // Red
 	7: 'ffffff' // White
-};
+	};
 
 function checkGeonet() {
 	request.get('http://www.geonet.org.nz/quakes/services/all.json', function(err, res, body) {
