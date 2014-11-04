@@ -22,7 +22,6 @@ var geonetNZNinja = {
 	init: function() {
 		_geonetNZNinja = this;
 		setInterval(this.checkGeonet, 5000);
-		//this.changeColor();
 	},
 
 	log: function(message) {
