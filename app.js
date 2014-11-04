@@ -41,7 +41,6 @@ var geonetNZNinja = {
 					_geonetNZNinja.magnitude = thisQuake.properties.magnitude.toFixed(0);
 					_geonetNZNinja.changeColor();
 					_geonetNZNinja.log('New Quake ' + _geonetNZNinja.magnitude + 'M detected');
-
 				}
 			}
 		});
@@ -50,6 +49,7 @@ var geonetNZNinja = {
 	setColor: function(color) {
 		_geonetNZNinja.ninja.devices({ device_type: 'rgbled' }, function(err, devices) {
 			_.each(devices, function(device, guid) {
+				_geonetNZNinja.log('Change Color ' + color);
 				_geonetNZNinja.ninja.device(guid).actuate(color);
 			});
 		});
@@ -61,7 +61,7 @@ var geonetNZNinja = {
 		} else {
 			_geonetNZNinja.setColor(_geonetNZNinja.colors[_geonetNZNinja.colorIndex]);
 			_geonetNZNinja.colorIndex++;
-			setTimeout(_geonetNZNinja.animateColor, 1000);
+			setTimeout(_geonetNZNinja.animateColor, 400);
 		}
 	},
 
